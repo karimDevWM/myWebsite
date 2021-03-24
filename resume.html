@@ -52,8 +52,7 @@
         <h1 class="text-center">Formations</h1>
         <hr class="mx-5">
         <button class="btn w-100" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            <h2 class="text-color">Formations en informatique</h2>
-            <p class="text-color">Cliquer pour déployer cette section</p>
+            <h2 class="btnn text-color">Formations en informatique<i class="fas fa-plus"></i></h2>
         </button>
         <div class="collapse" id="collapseExample">
             <div class="right-side row bg-dark text-color">
@@ -89,9 +88,9 @@
                 </div>    
             </div>
         </div>
+        <hr>
         <button class="btn w-100" type="button" data-toggle="collapse" data-target="#collapseComptabilité" aria-expanded="false" aria-controls="collapseComptabilité">
-            <h2 class="text-color">Formations en comptabilité</h2>
-            <p class="text-color">Cliquer pour déployer cette section</p>
+            <h2 class="btnn text-color">Formations en comptabilité<i class="fas fa-plus"></i></h2>
         </button>
         <div class="collapse" id="collapseComptabilité">
             <div class="right-side row bg-dark text-color">
@@ -142,8 +141,7 @@
         <h1 class="text-center">Compétences</h1>
         <hr class="mx-5">
         <button class="btn w-100" type="button" data-toggle="collapse" data-target="#collapseInformatiqueCompétences" aria-expanded="false" aria-controls="collapseInformatiqueCompétences">
-            <h2 class="text-color">Compétences en informatique</h2>
-            <p class="text-color">Cliquer pour déployer cette section</p>
+            <h2 class="btnn text-color">Compétences en informatique<i class="fas fa-plus"></i></h2>
         </button>
         <div class="collapse" id="collapseInformatiqueCompétences">
             <div class="right-side row bg-dark text-color">
@@ -259,9 +257,9 @@
                 </div>    
             </div>
         </div>
+        <hr>
         <button class="btn w-100" type="button" data-toggle="collapse" data-target="#collapseComptabilitéCompétences" aria-expanded="false" aria-controls="collapseComptabilitéCompétences">
-            <h2 class="text-color">Compétences en comptabilité</h2>
-            <p class="text-color">Cliquer pour déployer cette section</p>
+            <h2 class="btnn text-color">Compétences en comptabilité<i class="fas fa-plus"></i></h2>
         </button>
         <div class="collapse" id="collapseComptabilitéCompétences">
             <div class="right-side row bg-dark text-color">
@@ -283,9 +281,9 @@
                 </div>    
             </div>
         </div>
+        <hr>
         <button class="btn w-100" type="button" data-toggle="collapse" data-target="#collapseCommLangueCompetences" aria-expanded="false" aria-controls="collapseCommLangueCompetences">
-            <h2 class="text-color">Compétences en communication et langues</h2>
-            <p class="text-color">Cliquer pour déployer cette section</p>
+            <h2 class="btnn text-color">Compétences en communication et langues<i class="fas fa-plus"></i></h2>
         </button>
         <div class="collapse" id="collapseCommLangueCompetences">
             <div class="right-side row bg-dark text-color">
@@ -314,8 +312,7 @@
         <h1 class="text-center">Parcours professionnels</h1>
         <hr class="mx-5">
         <button class="btn w-100" type="button" data-toggle="collapse" data-target="#collapseInformatiqueParcours" aria-expanded="false" aria-controls="collapseInformatiqueParcours">
-            <h2 class="text-color">Parcours professionnels en informatique</h2>
-            <p class="text-color">Cliquer pour déployer cette section</p>
+            <h2 class="btnn text-color">Parcours professionnels en informatique<i class="fas fa-plus"></i></h2>
         </button>
         <div class="collapse" id="collapseInformatiqueParcours">
             <div class="right-side row bg-dark text-color">
@@ -363,9 +360,9 @@
                 </div>    
             </div>
         </div>
+        <hr>
         <button class="btn w-100" type="button" data-toggle="collapse" data-target="#collapseParcoursComptabilité" aria-expanded="false" aria-controls="collapseParcoursComptabilité">
-            <h2 class="text-color">Parcours professionnels en comptabilité</h2>
-            <p class="text-color">Cliquer pour déployer cette section</p>
+            <h2 class="btnn text-color">Parcours professionnels en comptabilité<i class="fas fa-plus"></i></h2>
         </button>
         <div class="collapse" id="collapseParcoursComptabilité">
             <div class="right-side row bg-dark text-color">
@@ -564,11 +561,27 @@
         </div>
     </div>
 
+
+
 <!-- jQuery first, then Popper.js, then Bootstrap JS, then Fontawesome JS-->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $(".collapse").each(function(){
+            $(this).prev("btn").find(".fas").addClass("fa-minus").remove("fa-plus");
+        });
+
+        $(".collapse").on('show.bs.collapse', function(){
+            $(this).prev(".btn").find(".fas").removeClass("fa-plus").addClass("fa-minus");
+        }).on('hide.bs.collapse', function(){
+            $(this).prev(".btn").find(".fas").removeClass("fa-minus").addClass("fa-plus");
+        });
+    });
+</script>
 
 </body>
 </html>

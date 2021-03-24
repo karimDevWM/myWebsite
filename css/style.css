@@ -2745,8 +2745,8 @@ textarea.form-control {
 
 .btn:focus, .btn.focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .btn.disabled, .btn:disabled {
@@ -10875,4 +10875,13 @@ img {
 
 .about-me {
   font-size: 30px;
+}
+
+.btnn i {
+  float: right;
+}
+
+body {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
